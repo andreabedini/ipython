@@ -1,0 +1,92 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">File</a>
+				<ul class="dropdown-menu">
+					<li><a href="#/new">New</a></li>
+					<li><a>Open...</a></li>
+					<li class="divider"></li>
+					<li><a>Make a Copy...</a></li>
+					<li><a>Rename...</a></li>
+					<li><a>Save a Checkpoint</a></li>
+					<li class="divider"></li>
+					<li><a>Revert to Checkpoint</a></li>
+					<li class="divider"></li>
+					<li><a>Download as</a></li>
+					<li class="divider"></li>
+					<li><a>Close and halt</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">Edit</a>
+				<ul class="dropdown-menu">
+					<li><a>Cut Cell</a></li>
+					<li><a>Copy Cell</a></li>
+					<li><a>Paste Cell Above</a></li>
+					<li><a>Paste Cell Below</a></li>
+					<li><a>Paste Cell &amp;amps; Replace</a></li>
+					<li><a>Delete Cell</a></li>
+					<li><a>Undo Delete Cell</a></li>
+					<li class="divider"></li>
+					<li><a>Split Cell</a></li>
+					<li><a>Merge Cell Above</a></li>
+					<li><a>Merge Cell Below</a></li>
+					<li class="divider"></li>
+					<li><a ng-click="moveCellUp()">Move Cell Up</a></li>
+					<li><a ng-click="moveCellDown()">Move Cell Down</a></li>
+					<li class="divider"></li>
+					<li><a ng-click="selectPreviousCell()">Select Previous Cell</a></li>
+					<li><a ng-click="selectNextCell()">Select Next Cell</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">View</a>
+				<ul class="dropdown-menu">
+					<li><a>Toggle Header</a></li>
+					<li><a>Toggle Toolbar</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">Insert</a>
+				<ul class="dropdown-menu">
+					<li><a ng-click="insertCellAbove()">Insert Cell Above</a></li>
+					<li><a ng-click="insertCellBelow()">Insert Cell Below</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">Cell</a>
+				<ul class="dropdown-menu">
+					<li><a ng-click="runCell()">Run</a></li>
+					<li><a>Run in Place</a></li>
+					<li><a ng-click="runAll()">Run All</a></li>
+					<li><a ng-click="runAllAbove()">Run All Above</a></li>
+					<li><a ng-click="runAllBelow()">Run All Below</a></li>
+					<li class="divider"></li>
+					<li><a>Cell Type</a></li>
+					<li class="divider"></li>
+					<li><a>Toggle Current Output</a></li>
+					<li><a>All Output</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">Kernel</a>
+				<ul class="dropdown-menu">
+					<li><a>Interrupt</a></li>
+					<li><a ng-click="kernel.restart()">Restart</a></li>
+				</ul>
+			</li>
+			<li class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown">Help</a>
+				<ul class="dropdown-menu">
+				</ul>
+			</li>
+		</ul>
+		<p class="navbar-text pull-right">
+			<i class="icon-spinner icon-spin icon-large" ng-show="kernel.status == 'busy'"></i>
+		</p>
+		<p class="navbar-text pull-right">
+			<span ng-show="notebook.last_saved">last saved <span from-now time="notebook.last_saved"></span></span>
+		</p>
+	</div>
+</div>

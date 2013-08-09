@@ -1,0 +1,30 @@
+<div class="container">
+<div ng-include src="'partials/menu.html'"></div>
+<div ng-include src="'partials/toolbar.html'"></div>
+</div>
+<!-- main area -->
+<div class="container">
+	<div class="cell" ng-repeat="cell in notebook.cells" ng-controller="CellCtrl" ng-class="{'focused': $index == notebook.selected_cell}">
+		<div class="row">
+			<div class="span2 prompt">In[{{cell.input.execution_count}}]</div>
+			<div class="span9 input">
+				<div code-mirror='editorOptions' ng-model="cell.input.code"></div>
+			</div>
+		</div>
+		<div class="row" ng-show="cell.stderr" ng-click="clicked()">
+			<div class="span9 offset2"><div class="output-area output-text" ng-bind-html-unsafe="cell.stderr | fixConsole | fixCarriageReturn"></div></div>
+		</div>
+		<div class="row" ng-show="cell.stdout" ng-click="clicked()">
+			<div class="span9 offset2"><div class="output-area output-text" ng-bind-html-unsafe="cell.stdout | fixConsole | fixCarriageReturn"></div></div>
+		</div>
+		<div class="row" ng-show="cell.error" ng-click="clicked()">
+			<div class="span9 offset2"><div class="alert alert-error output-area output-text" ng-bind-html-unsafe="cell.error.traceback.join('\n') | fixConsole | fixCarriageReturn"></div></div>
+		</div>
+		<div class="row" ng-repeat="output in cell.outputs" ng-click="clicked()">
+			<div class="span2 prompt">
+				<span ng-show="output.execution_count">Out[{{output.execution_count}}]</span>
+			</div>
+			<div class="span9" output-cell></div>
+		</div>
+	</div>
+</div>

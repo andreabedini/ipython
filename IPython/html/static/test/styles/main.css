@@ -1,0 +1,125 @@
+.cell .row {
+	margin-bottom: 15px;
+}
+
+.cell {
+	padding: 5px;
+}
+
+.input {
+	border-radius: 4px;
+	background: #f7f7f7;
+	border: 1px solid #cfcfcf;;
+	padding: 0.4em;
+	line-height: 20px;
+	font-size: 13px;
+}
+
+.cell.focused {
+	border-radius: 10px;
+	border: 1px solid gray;
+	margin: -1px;
+}
+
+div.prompt {
+	color: navy;
+	font-family: monospace;
+	text-align: right;
+}
+
+.CodeMirror {
+	height: auto;
+	background: transparent;
+}
+.CodeMirror-scroll {
+	overflow-y: hidden;
+	overflow-x: auto;
+}
+
+.CodeMirror pre {
+	padding: 0px;
+}
+
+iframe {
+	width: 100%;
+}
+
+.output-area {
+	font-family: monospace;
+	font-size: 100%;
+	color: black;
+}
+
+.output-text {
+	white-space: pre-wrap;
+}
+
+# colors 
+
+.ansibold {
+	font-weight: bold;
+}
+
+.ansiblack {
+	color: black;
+}
+
+.ansired {
+	color: darkred;
+}
+
+.ansigreen {
+	color: darkgreen;
+}
+
+.ansiyellow {
+	color: brown;
+}
+
+.ansiblue {
+	color: darkblue;
+}
+
+.ansipurple {
+	color: darkviolet;
+}
+
+.ansicyan {
+	color: steelblue;
+}
+
+.ansigray {
+	color: gray;
+}
+
+.ansibgblack {
+	background-color: black;
+}
+
+.ansibgred {
+	background-color: red;
+}
+
+.ansibggreen {
+	background-color: green;
+}
+
+.ansibgyellow {
+	background-color: yellow;
+}
+
+.ansibgblue {
+	background-color: blue;
+}
+
+.ansibgpurple {
+	background-color: magenta;
+}
+
+.ansibgcyan {
+	background-color: cyan;
+}
+
+.ansibggray {
+	background-color: gray;
+}
