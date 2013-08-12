@@ -1,7 +1,7 @@
 Hi!
 ===
 
-In this folder a proof of concept implementation of a notebook webapp using AngularJS.
+This is a proof of concept of a IPython notebook webapp using AngularJS.
 
 I hacked this together in few days just because I love IPython and I wanted to learn some webdev, it is not supposed to be complete or even useful to anyone. I don't know much of IPython's internals so I just put everything inside the html notebook static folder. I know that this is not the way to start any serious business but, indeed, it is not.
 
